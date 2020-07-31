@@ -11,6 +11,11 @@ $small-text: 12px;
   justify-content: space-between;
 }
 
+@mixin flex-align-center() {
+  display: flex;
+  align-items: center;
+}
+
 .wrapper {
   display: flex;
 }
