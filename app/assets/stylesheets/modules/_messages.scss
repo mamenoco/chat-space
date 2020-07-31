@@ -63,7 +63,7 @@ $small-text: 12px;
         margin-bottom: 15px;
       }
       &__memberList {
-        font-size: 12px;
+        font-size: $small-text;
         color: #999;
         display: flex;
       }
@@ -96,7 +96,7 @@ $small-text: 12px;
           font-weight: bold;
         }
         &__date {
-          font-size: 12px;
+          font-size: $small-text;
           color: #999;
           padding-left: 10px;
         }
