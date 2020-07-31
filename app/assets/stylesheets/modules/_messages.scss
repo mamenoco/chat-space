@@ -53,6 +53,11 @@
     justify-content: space-between;
     &__group {
       margin: 35px 0 0 40px;
+      &__groupName {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
     }
   }
 }
