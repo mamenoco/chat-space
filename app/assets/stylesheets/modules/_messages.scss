@@ -6,6 +6,11 @@ $header-height: 100px;
 $large-text: 16px;
 $small-text: 12px;
 
+@mixin flex-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
 .wrapper {
   display: flex;
 }
