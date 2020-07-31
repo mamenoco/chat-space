@@ -121,6 +121,12 @@
           border: none;
           padding-left: 10px;
         }
+        &__image {
+          height: 50px;
+          position: absolute;
+          right: 10px;
+          cursor: pointer;
+        }
       }
     }
   }
