@@ -41,7 +41,7 @@ $side-width: 300px;
     }
   }
   .GroupList {
-    height: calc(100vh - $header-height);
+    height: calc(100vh - #{$header-height});
     background-color: #2f3e51;
     &__groupBox {
       width: 100%;
