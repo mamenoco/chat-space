@@ -24,9 +24,8 @@ $small-text: 12px;
   width: 300px;
   background-color: #253141;
   .LeftHeader {
+    @include flex-align-center();
     height: $header-height;
-    display: flex;
-    align-items: center;
     padding: 0 20px;
     &__topItems {
       @include flex-between();
@@ -77,6 +76,7 @@ $small-text: 12px;
       }
     }
     &__editButton {
+      @include flex-align-center();
       width: 72px;
       height: 40px;
       color: #38aef0;
@@ -85,8 +85,6 @@ $small-text: 12px;
       margin: 28px 40px 0 0;
       padding: 0 20px;
       text-decoration: none;
-      display: flex;
-      align-items: center;
     }
   }
   .MessageList {
