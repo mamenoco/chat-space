@@ -83,5 +83,10 @@
     padding: 35px 0 0 40px;
     .MessageBox {
       margin-bottom: 46px;
+      &__messageInfo {
+        display: flex;
+        padding-bottom: 12px;
+      }
+    }
   }
 }
