@@ -46,4 +46,10 @@
 .Main {
   width: calc(100vw - 300px);
   background-color: #fff;
+  .RightHeader {
+    height: 100px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+  }
 }
