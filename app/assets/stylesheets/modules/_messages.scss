@@ -23,7 +23,7 @@ $large-text: 16px;
       display: flex;
       justify-content: space-between;
       &__userName {
-        font-size: 16px;
+        font-size: $large-text;
         font-weight: bold;
       }
     }
@@ -72,7 +72,7 @@ $large-text: 16px;
       height: 40px;
       color: #38aef0;
       border: 1px solid #38aef0;
-      font-size: 16px;
+      font-size: $large-text;
       margin: 28px 40px 0 0;
       padding: 0 20px;
       text-decoration: none;
@@ -90,7 +90,7 @@ $large-text: 16px;
         display: flex;
         padding-bottom: 12px;
         &__userName {
-          font-size: 16px;
+          font-size: $large-text;
           color: #333;
           font-weight: bold;
         }
@@ -139,7 +139,7 @@ $large-text: 16px;
         background-color: #38AEF0;
         border: none;
         color: #fff;
-        font-size: 16px;
+        font-size: $large-text;
         height: 50px;
         margin-left: 15px;
         padding: 0 30px;
