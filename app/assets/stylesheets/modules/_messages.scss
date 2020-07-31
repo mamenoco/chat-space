@@ -12,7 +12,7 @@ $header-height: 100px;
   width: 300px;
   background-color: #253141;
   .LeftHeader {
-    height: 100px;
+    height: $header-height;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -49,7 +49,7 @@ $header-height: 100px;
   width: calc(100vw - 300px);
   background-color: #fff;
   .RightHeader {
-    height: 100px;
+    height: $header-height;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
