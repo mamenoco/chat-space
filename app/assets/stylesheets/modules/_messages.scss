@@ -24,7 +24,7 @@ $side-width: 300px;
 }
 
 .Side {
-  width: 300px;
+  width: $side-width;
   background-color: #253141;
   .LeftHeader {
     @include flex-align-center();
@@ -59,7 +59,7 @@ $side-width: 300px;
 }
 
 .Main {
-  width: calc(100vw - 300px);
+  width: calc(100vw - #{$side-width});
   background-color: #fff;
   .RightHeader {
     @include flex-between();
