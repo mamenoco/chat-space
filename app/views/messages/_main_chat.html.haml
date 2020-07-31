@@ -27,3 +27,11 @@
           2019/11/20(Wed) 17:43:43
       .MessageBox__message
         今日は夜から雨
+  .Footer
+    %Form{class: "Form"}
+      .Form__contents
+        %input{type: "text", placeholder: "type a message", class: "Form__contents__text"}
+        %label{class: "Form__contents__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "Hidden"}
+      %input{type: "submit", value: "Send", class: "Form__submit"}
