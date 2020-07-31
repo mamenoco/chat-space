@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 
-$header-height: 100px;
 $large-text: 16px;
 $small-text: 12px;
+$header-height: 100px;
 $footer-height: 90px;
 $form-height: 50px;
 
@@ -90,7 +90,7 @@ $form-height: 50px;
     }
   }
   .MessageList {
-    height: calc(100vh - 190px);
+    height: calc(100vh - (#{$header-height} + #{$footer-height}));
     background-color: #fafafa;
     padding: 35px 0 0 40px;
     .MessageBox {
