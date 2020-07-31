@@ -39,7 +39,7 @@ $form-height: 50px;
     }
   }
   .GroupList {
-    height: calc(100vh - 100px);
+    height: calc(100vh - $header-height);
     background-color: #2f3e51;
     &__groupBox {
       width: 100%;
