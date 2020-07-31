@@ -51,5 +51,8 @@
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
+    &__group {
+      margin: 35px 0 0 40px;
+    }
   }
 }
