@@ -14,5 +14,11 @@
     display: flex;
     align-items: center;
     padding: 0 20px;
+    &__topItems {
+      width: 100%;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
