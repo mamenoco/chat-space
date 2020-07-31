@@ -24,10 +24,9 @@ $small-text: 12px;
     align-items: center;
     padding: 0 20px;
     &__topItems {
+      @include flex-between();
       width: 100%;
       color: #fff;
-      display: flex;
-      justify-content: space-between;
       &__userName {
         font-size: $large-text;
         font-weight: bold;
@@ -56,10 +55,9 @@ $small-text: 12px;
   width: calc(100vw - 300px);
   background-color: #fff;
   .RightHeader {
+    @include flex-between();
     height: $header-height;
     border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
     &__group {
       margin: 35px 0 0 40px;
       &__groupName {
@@ -118,8 +116,7 @@ $small-text: 12px;
     background-color: #d2d2d2;
     padding: 20px 50px 20px 40px;
     .Form {
-      display: flex;
-      justify-content: space-between;
+      @include flex-between();
       &__contents {
         width: 100%;
         background-color: #fff;
