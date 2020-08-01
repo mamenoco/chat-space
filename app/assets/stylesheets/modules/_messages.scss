@@ -38,6 +38,12 @@ $side-width: 300px;
         font-size: $large-text;
         font-weight: bold;
       }
+      &__icons {
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
     }
   }
   .GroupList {
