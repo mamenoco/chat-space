@@ -1,0 +1,37 @@
+.Main
+  .RightHeader
+    .RightHeader__group
+      .RightHeader__group__groupName
+        test
+      %ul.RightHeader__group__memberList
+        Member
+        =":"
+        %li.RightHeader__group__member
+        masa
+    = link_to "#", class: "RightHeader__editButton" do
+      Edit
+  .MessageList
+    .MessageBox
+      .MessageBox__messageInfo
+        .MessageBox__messageInfo__userName
+          masa
+        .MessageBox__messageInfo__date
+          2019/11/20(Wed) 17:43:01
+      .MessageBox__message
+        おはよう！
+    .MessageBox
+      .MessageBox__messageInfo
+        .MessageBox__messageInfo__userName
+          masa
+        .MessageBox__messageInfo__date
+          2019/11/20(Wed) 17:43:43
+      .MessageBox__message
+        今日は夜から雨
+  .Footer
+    %Form{class: "Form"}
+      .Form__contents
+        %input{type: "text", placeholder: "type a message", class: "Form__contents__text"}
+        %label{class: "Form__contents__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "Hidden"}
+      %input{type: "submit", value: "Send", class: "Form__submit"}

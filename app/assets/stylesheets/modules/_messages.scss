@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+$large-text: 16px;
+$small-text: 12px;
+$header-height: 100px;
+$footer-height: 90px;
+$form-height: 50px;
+$side-width: 300px;
+
+@mixin flex-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-align-center() {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.Side {
+  width: $side-width;
+  background-color: #253141;
+  .LeftHeader {
+    @include flex-align-center();
+    height: $header-height;
+    padding: 0 20px;
+    &__topItems {
+      @include flex-between();
+      width: 100%;
+      color: #fff;
+      &__userName {
+        font-size: $large-text;
+        font-weight: bold;
+      }
+    }
+  }
+  .GroupList {
+    height: calc(100vh - #{$header-height});
+    background-color: #2f3e51;
+    &__groupBox {
+      width: 100%;
+      padding: 20px 20px 40px;
+      color: white;
+      &__groupName {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__latestMessage {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.Main {
+  width: calc(100vw - #{$side-width});
+  background-color: #fff;
+  .RightHeader {
+    @include flex-between();
+    height: $header-height;
+    border-bottom: 1px solid #eee;
+    &__group {
+      margin: 35px 0 0 40px;
+      &__groupName {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      &__memberList {
+        font-size: $small-text;
+        color: #999;
+        display: flex;
+      }
+    }
+    &__editButton {
+      @include flex-align-center();
+      width: 72px;
+      height: 40px;
+      color: #38aef0;
+      border: 1px solid #38aef0;
+      font-size: $large-text;
+      margin: 28px 40px 0 0;
+      padding: 0 20px;
+      text-decoration: none;
+    }
+  }
+  .MessageList {
+    height: calc(100vh - (#{$header-height} + #{$footer-height}));
+    background-color: #fafafa;
+    padding: 35px 0 0 40px;
+    .MessageBox {
+      margin-bottom: 46px;
+      &__messageInfo {
+        display: flex;
+        padding-bottom: 12px;
+        &__userName {
+          font-size: $large-text;
+          color: #333;
+          font-weight: bold;
+        }
+        &__date {
+          font-size: $small-text;
+          color: #999;
+          padding-left: 10px;
+        }
+      }
+      &__message {
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+
+  .Footer {
+    height: $footer-height;
+    background-color: #d2d2d2;
+    padding: 20px 50px 20px 40px;
+    .Form {
+      @include flex-between();
+      &__contents {
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        &__text {
+          width: 100%;
+          height: $form-height;
+          border: none;
+          padding-left: 10px;
+        }
+        &__image {
+          height: $form-height;
+          position: absolute;
+          right: 10px;
+          cursor: pointer;
+        }
+      }
+      .fa-image {
+        line-height: $form-height;
+        font-size: 25px;
+      }
+      &__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: #fff;
+        font-size: $large-text;
+        height: $form-height;
+        margin-left: 15px;
+        padding: 0 30px;
+        cursor: pointer;
+      }
+      .Hidden {
+        display: none;
+      }
+    }
+  }
+}
