@@ -19,6 +19,11 @@ $side-width: 300px;
   align-items: center;
 }
 
+@mixin white-link() {
+  text-decoration: none;
+  color: white;
+}
+
 .wrapper {
   display: flex;
 }
