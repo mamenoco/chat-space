@@ -4,7 +4,7 @@
       %h3.LeftHeader__topItems__userName
         = current_user.name
       .LeftHeader__topItems__icons
-        = link_to '#' do
+        = link_to 'groups/new' do
           = icon('fas', 'edit')
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog')
