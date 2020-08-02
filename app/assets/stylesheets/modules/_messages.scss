@@ -45,8 +45,7 @@ $side-width: 300px;
       }
       &__icons {
         a {
-          text-decoration: none;
-          color: #fff;
+          @include white-link();
         }
       }
     }
@@ -57,7 +56,9 @@ $side-width: 300px;
     &__groupBox {
       width: 100%;
       padding: 20px 20px 40px;
-      color: white;
+      a {
+        @include white-link();
+      }
       &__groupName {
         font-size: 15px;
         margin-bottom: 5px;
