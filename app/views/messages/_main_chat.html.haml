@@ -30,8 +30,8 @@
   .Footer
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
-        = f.label :image, class: 'Form__inputImage' do
+        = f.text_field :content, class: 'Form__contents__text', placeholder: 'type a message'
+        = f.label :image, class: 'Form__contents__image' do
           = icon('far', 'image')
           = f.file_field :image, class: 'Hidden'
       = f.submit 'Send', class: 'Form__submit'
