@@ -11,14 +11,7 @@
     = link_to "#", class: "RightHeader__editButton" do
       Edit
   .MessageList
-    .MessageBox
-      .MessageBox__messageInfo
-        .MessageBox__messageInfo__userName
-          masa
-        .MessageBox__messageInfo__date
-          2019/11/20(Wed) 17:43:01
-      .MessageBox__message
-        おはよう！
+    = render @messages
   .Footer
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
