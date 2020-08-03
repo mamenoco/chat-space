@@ -2,12 +2,13 @@
   .RightHeader
     .RightHeader__group
       .RightHeader__group__groupName
-        test
+        = @group.name
       %ul.RightHeader__group__memberList
         Member
         =":"
-        %li.RightHeader__group__member
-        masa
+        - @group.users.each do |user|
+          %li.RightHeader__group__member
+            = user.name
     = link_to "#", class: "RightHeader__editButton" do
       Edit
   .MessageList
