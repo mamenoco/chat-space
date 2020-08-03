@@ -28,10 +28,10 @@
       .MessageBox__message
         今日は夜から雨
   .Footer
-    %Form{class: "Form"}
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        %input{type: "text", placeholder: "type a message", class: "Form__contents__text"}
-        %label{class: "Form__contents__image"}
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
           = icon('far', 'image')
-          %input{type: "file", class: "Hidden"}
-      %input{type: "submit", value: "Send", class: "Form__submit"}
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
