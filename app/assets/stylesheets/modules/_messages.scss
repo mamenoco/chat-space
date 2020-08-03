@@ -112,6 +112,7 @@ $side-width: 300px;
     height: calc(100vh - (#{$header-height} + #{$footer-height}));
     background-color: #fafafa;
     padding: 35px 0 0 40px;
+    overflow: scroll;
     .MessageBox {
       margin-bottom: 46px;
       &__messageInfo {
