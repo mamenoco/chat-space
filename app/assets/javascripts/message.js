@@ -48,7 +48,12 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      if (messages.length !== 0) {
+        let insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.MessageField').append(insertHTML);
     })
     .fail(function() {
       alert('error');
@@ -78,4 +83,8 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     });
   })
+
+  $(function() {
+    setInterval(reloadMessages, 7000);
+  });
 });
