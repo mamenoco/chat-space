@@ -1,42 +1,40 @@
 $(function(){
   function buildHTML(message){
-    if ( message.image ) {
-      let html =
-        `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="MessageInfo">
-            <div class="MessageInfo__userName">
-              ${message.user_name}
-            </div>
-            <div class="MessageInfo__date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="Message">
-            <p class="Message__content">
-              ${message.content}
-            </p>
-            <img class="Message__image" src="${message.image}">
-          </div>
-        </div>`
-      return html;
+    if (message.image) {
+      let html = `<div class="MessageBox" data-message-id=${message.id}>
+                    <div class="MessageBox__messageInfo">
+                      <div class="MessageBox__messageInfo__userName">
+                        ${message.user_name}
+                      </div>
+                      <div class="MessageBox__messageInfo__date">
+                        ${message.created_at}
+                      </div>
+                    </div>
+                    <div class="MessageBox__message">
+                      <p class="Messagebox__content">
+                        ${message.content}
+                      </p>
+                      <img class="Messagebox__image" src="${message.image}">
+                    </div>
+                  </div>`
+                  return html;
     } else {
-      let html =
-      `<div class="MessageBox" data-message-id=${message.id}>
-        <div class="MessageInfo">
-          <div class="MessageInfo__userName">
-            ${message.user_name}
-          </div>
-          <div class="MessageInfo__date">
-            ${message.created_at}
-          </div>
-        </div>
-        <div class="Message">
-          <p class="Message__content">
-            ${message.content}
-          </p>
-        </div>
-      </div>`
-      return html;
+      let html = `<div class="MessageBox" data-message-id=${message.id}>
+                    <div class="MessageBox__messageInfo">
+                      <div class="MessageBox__messageInfo__userName">
+                        ${message.user_name}
+                      </div>
+                      <div class="MessageBox__messageInfo__date">
+                        ${message.created_at}
+                      </div>
+                    </div>
+                    <div class="MessageBox__message">
+                      <p class="Messagebox__content">
+                        ${message.content}
+                      </p>
+                    </div>
+                  </div>`
+                  return html;
     };
   }
 
@@ -62,8 +60,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.MessageField').append(insertHTML);
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+        $('.MessageList').append(insertHTML);
+        $('.MessageList').animate({ scrollTop: $('.MessageList')[0].scrollHeight});
       }
     })
     .fail(function() {
