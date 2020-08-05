@@ -2,7 +2,7 @@ $(function(){
 
   function buildHTML(message){
     if (message.image) {
-      let html = `<div class="MessageBox">
+      let html = `<div class="MessageBox" data-message-id=${message.id}>
                     <div class="MessageBox__messageInfo">
                       <div class="MessageBox__messageInfo__userName">
                         ${message.user_name}
@@ -20,7 +20,7 @@ $(function(){
                   </div>`
                   return html;
     } else {
-      let html = `<div class="MessageBox">
+      let html = `<div class="MessageBox" data-message-id=${message.id}>
                     <div class="MessageBox__messageInfo">
                       <div class="MessageBox__messageInfo__userName">
                         ${message.user_name}
@@ -38,6 +38,23 @@ $(function(){
                   return html;
     };
   }
+
+  let reloadMessages = function() {
+    let last_message_id = $('.MessageBox:last').data("message-id") || 0;
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log('success');
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
+
   $('.Form').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
