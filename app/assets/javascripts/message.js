@@ -54,6 +54,7 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         $('.MessageField').append(insertHTML);
+      }
     })
     .fail(function() {
       alert('error');
