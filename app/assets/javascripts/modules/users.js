@@ -9,6 +9,16 @@ $(function() {
     $("#UserSearchResult").append(html);
   }
 
+  function returnMember(user) {
+    let html = `
+                <div class="ChatMember">
+                  <p class="ChatMember__name">${user.name}</p>
+                  <div class="ChatMember__add ChatMember__button" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
+                </div>
+                `;
+    $("#UserSearchResult").append(html);
+  }
+
   function addNoUser() {
     let html = `
                 <div class="ChatMember">
@@ -31,10 +41,14 @@ $(function() {
 
   $("#UserSearch__field").on("keyup", function() {
     let input = $("#UserSearch__field").val();
+    let ids = [];
+    $.each( $(".ChatMembers").find("input"), function(key,value){
+      ids.push(  $(value).attr("value") );
+    })
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: { keyword: input, ids: ids },
       dataType: "json"
     })
     .done(function(users) {
